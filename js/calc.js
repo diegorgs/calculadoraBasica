@@ -1,17 +1,18 @@
 //incluindo eval()
-function calc(tipo,valor){
-    if(tipo == 'func'){
-            if(valor == 'c'){
-                document.getElementById('resultado').value = '';
-            }
-            if((valor == '+') || (valor == '-') || (valor == '*') || (valor == '/') || (valor == '.')){
-                document.getElementById('resultado').value += valor;
-            }
-            if(valor == '='){
-                document.getElementById('resultado').value = (eval(document.getElementById('resultado').value))
-            }
-    }else if(tipo == 'valor'){
-        document.getElementById('resultado').value += valor;
+let tela = document.getElementById('resultado')
+function calc(tipo, valor) {
+    if (tipo == 'func') {
+        if (valor == 'c') {
+            tela.value = '';
+        }
+        if ((valor == '+') || (valor == '-') || (valor == '*') || (valor == '/') || (valor == '.')) {
+            tela.value += valor;
+        }
+        if (valor == '=') {
+            tela.value = (eval(tela.value))
+        }
+    } else if (tipo == 'valor') {
+        tela.value += valor;
     }
 }
 
