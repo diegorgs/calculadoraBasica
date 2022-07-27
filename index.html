@@ -9,79 +9,67 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css">
 
+
     <title>Calculadora</title>
 </head>
 
-<body class="bg-dark text-white">
-
-    <div class="container">
-
-
-        <div class="container">
-            <div class="row">
-                <div>
-                    <h1>Calculadora</h1>
-                </div>
-                <div class="col d-flex justify-content-center">
-
-
-                    <div class="calculadora">
-
-                        <div>
-                            <p id='hist' style='text-align:right; height: 15px;'>
-                        </div>
-                        <input id="resultado" type="text" class="form-control resultado" placeholder="0"
-                            disabled="disabled" />
-
-                        <div class="row">
-                            <button onclick="limpar()" type="button" class="btn btn-danger btn-lg clear">C</button>
-                            <button onclick="operadores('/')" type="button" class="btn btn-warning btn-lg">/</button>
-                            <button onclick="operadores('*')" type="button" class="btn btn-warning btn-lg">x</button>
-                        </div>
-
-                        <div class="row">
-                            <button onclick="calcular('7')" type="button" class="btn btn-primary btn-lg ">7</button>
-                            <button onclick="calcular('8')" type="button" class="btn btn-primary btn-lg ">8</button>
-                            <button onclick="calcular('9')" type="button" class="btn btn-primary btn-lg">9</button>
-                            <button onclick="operadores('-')" type="button" class="btn btn-primary btn-lg ">-</button>
-                        </div>
-
-                        <div class="row">
-                            <button onclick="calcular('4')" type="button" class="btn btn-primary btn-lg">4</button>
-                            <button onclick="calcular('5')" type="button" class="btn btn-primary btn-lg">5</button>
-                            <button onclick="calcular('6')" type="button" class="btn btn-primary btn-lg">6</button>
-                            <button onclick="operadores('+')" type="button" class="btn btn-primary btn-lg">+</button>
-                        </div>
-
-                        <div class="row">
-                            <button onclick="calcular('1')" type="button" class="btn btn-primary btn-lg">1</button>
-                            <button onclick="calcular('2')" type="button" class="btn btn-primary btn-lgt">2</button>
-                            <button onclick="calcular('3')" type="button" class="btn btn-primary btn-lg">3</button>
-                            <button onclick="igual('=')" type="button" class="btn btn-primary btn-lg enter">=</button>
-                        </div>
-
-                        <div class="row" style="margin-top: -60px">
-                            <button onclick="calcular('0')" type="button"
-                                class="btn btn-primary zero btn-lg font-weight-light">0</button>
-                            <button onclick="calcular('.')" type="button" id='btnP'
-                                class="btn btn-primary btn-lg font-weight-light">.</button>
-                        </div>
-
-                    </div>
-                </div>
+<body class='bg-dark'>
+    <div class="container text-white">
+        <div class="container row">
+            <div>
+                <h1>Calculadora</h1>
             </div>
-            <div class='mt-5'>
-                <h1>Históricos</h1>
-                <div class="my-2">
-                    <p id="lista"></p>
-                </div>
+            <div class=" container col d-flex justify-content-center">
+                <div class=" calculadora bg-secondary mt-5">
+                    <div>
+                        <p id='hist' style='text-align:right; height: 15px;'>
+                    </div>
+                    <input id="resultado" type="text" class="form-control resultado w-100" placeholder="0"
+                        disabled="disabled" />
+                    <div class='row'>
 
+                        <button onclick="calc('func','c')" type="button" class="btn btn-danger btn-lg clear">C</button>
+                        <button onclick="calc('func','/')" type="button" class="btn btn-warning btn-lg">/</button>
+                        <button onclick="calc('func','x')" type="button" class="btn btn-warning btn-lg">x</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="calc('valor','7')" type="button" class="btn btn-primary btn-lg ">7</button>
+                        <button onclick="calc('valor','8')" type="button" class="btn btn-primary btn-lg ">8</button>
+                        <button onclick="calc('valor','9')" type="button" class="btn btn-primary btn-lg">9</button>
+                        <button onclick="calc('func','-')" type="button" class="btn btn-primary btn-lg ">-</button>
+                    </div>
+                    <div class='row'>
+                        <button onclick="calc('valor','4')" type="button" class="btn btn-primary btn-lg">4</button>
+                        <button onclick="calc('valor','5')" type="button" class="btn btn-primary btn-lg">5</button>
+                        <button onclick="calc('valor','6')" type="button" class="btn btn-primary btn-lg">6</button>
+                        <button onclick="calc('func','+')" type="button" class="btn btn-primary btn-lg">+</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="calc('valor','1')" type="button" class="btn btn-primary btn-lg">1</button>
+                        <button onclick="calc('valor','2')" type="button" class="btn btn-primary btn-lgt">2</button>
+                        <button onclick="calc('valor','3')" type="button" class="btn btn-primary btn-lg">3</button>
+                        <button onclick="calc('func','=')" type="button" class="btn btn-primary btn-lg enter">=</button>
+                    </div>
+                    <div class="row" style="margin-top: -60px">
+                        <button onclick="calc('valor','0')" type="button" class="btn btn-primary zero btn-lg font-weight-light">0</button>
+                        <button onclick="calc('func','.')" type="button" class="btn btn-primary btn-lg font-weight-light">.</button>
+                    </div>
+
+                </div>
             </div>
         </div>
-
-        <script src="js/calc.js"></script>
-
+        <div class='mt-5'>
+            <h1>Históricos</h1>
+            <div class="my-2">
+                <p id="lista"></p>
+            </div>
+        </div>
     </div>
-</body>
 
+
+
+
+    <script src="js/calc.js"></script>
+    
+</body>
 </html>
